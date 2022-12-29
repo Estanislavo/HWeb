@@ -1,0 +1,19 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}
+        Главная страничка
+{% endblock %}
+
+{% block content %}
+        <h1>{{ obj.123 }}</h1>
+        <h1>Ееее, главная страница с использованием Jinja</h1>
+        <h1>Охуеть....</h1>
+        {% for el in values %}
+                {% if 'Temp' in el %}
+                        {% filter upper %}
+                        <p>{{ el }}</p>
+                        {% endfilter %}
+                {% endif %}
+        {% endfor %}
+        {% include 'main/test.html' %}
+{% endblock %}
